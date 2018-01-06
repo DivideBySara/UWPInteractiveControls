@@ -7,7 +7,29 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <!--<StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Rectangle Fill="Blue" Visibility="Collapsed" Height="100"/>
+        <Rectangle Fill="Green" Height="100"/>
+    </StackPanel>-->
+    
+    <!--<Grid>
+         *** Pointer events cover touch, mouse, and stylus *** for ENTER key: https://social.msdn.microsoft.com/Forums/en-US/5db84580-5d45-4298-936a-ad55129f51a6/detecting-enter-key-pressed-in-uwp?forum=wpdevelop https://stackoverflow.com/questions/4834227/invoke-command-when-enter-key-is-pressed-in-xaml
+        <TextBlock Text="What is your name?" FontSize="50" HorizontalAlignment="Center" VerticalAlignment="Center" PointerPressed="TextBlock_PointerPressed"/>
+        <Rectangle ManipulationMode="Rotate,Scale" ManipulationStarted="Rectangle_ManipulationStarted" IsHitTestVisible="False" Fill="Green" Opacity="0.5" Height="100" PointerPressed="Rectangle_PointerPressed">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <TranslateTransform Y="-80"/>
+                    <RotateTransform Angle="15"/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle> 
 
-    </Grid>
+        <Button Content="Click here!" FontSize="100"/>
+    </Grid> -->
+
+    <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Button Content="Click here!" FontSize="100" Click="Button_Click"/>
+        <TextBlock Text="" x:Name="tblock1" FontSize="100"/>
+        <TextBox Text="" x:Name="tbox1" FontSize="100"/>
+    </StackPanel>
 </Page>
